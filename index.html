@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jewelry Shop</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #333;
+  }
+  header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .product-section {
+    text-align: center;
+    padding: 20px;
+  }
+  .product-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  .product-item:hover {
+    transform: translateY(-5px);
+  }
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  footer {
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .form-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .form-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .form-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #fda085;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .form-group button:hover {
+    background: #f6d365;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Jewelry Shop</h1>
+</header>
+<nav>
+  <a href="#">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+<section id="products" class="product-section">
+  <h2>Products</h2>
+  <div class="product-item">
+    <img class="product-image" src="https://via.placeholder.com/150" alt="Ring">
+    <h3>Rings</h3>
+    <p>Discover our beautiful collection of rings.</p>
+  </div>
+  <div class="product-item">
+    <img class="product-image" src="https://via.placeholder.com/150" alt="Earrings">
+    <h3>Earrings</h3>
+    <p>Add a touch of elegance with our earrings.</p>
+  </div>
+  <div class="product-item">
+    <img class="product-image" src="https://via.placeholder.com/150" alt="Bracelets">
+    <h3>Bracelets</h3>
+    <p>Complete your look with our stylish bracelets.</p>
+  </div>
+  <div class="product-item">
+    <img class="product-image" src="https://via.placeholder.com/150" alt="Chains">
+    <h3>Chains</h3>
+    <p>Explore our range of chains.</p>
+  </div>
+  <div class="product-item">
+    <img class="product-image" src="https://via.placeholder.com/150" alt="Watches">
+    <h3>Watches</h3>
+    <p>Find the perfect watch for any occasion.</p>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2023 Jewelry Shop. All rights reserved.</p>
+</footer>
+<section class="form-section">
+  <div class="form-container">
+    <h2 class="form-header">Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+<script>
+  // Basic form validation
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    if (name.value && email.value && message.value) {
+      alert('Form submitted successfully!');
+    } else {
+      alert('Please fill in all fields.');
+    }
+  });
+</script>
+</body>
+</html>
